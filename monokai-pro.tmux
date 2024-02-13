@@ -91,7 +91,7 @@ load_modules() {
 
     if [ 0 -eq $? ]
     then
-      loaded_modules="$loaded_modules$( show_$module_name $module_index )"
+      loaded_modules="$loaded_modules $( show_$module_name $module_index )"
       module_index=$module_index+1
       continue
     fi
@@ -167,7 +167,7 @@ main() {
   local status_left_separator=$(get_tmux_option "@monokai-pro_status_left_separator" "")
   local status_right_separator=$(get_tmux_option "@monokai-pro_status_right_separator" "")
 
-  local status_modules_right=$(get_tmux_option "@monokai-pro_status_modules_right" "datetime")
+  local status_modules_right=$(get_tmux_option "@monokai-pro_status_modules_right" "datetime mode")
   local loaded_modules_right=$( load_modules "$status_modules_right")
   set status-right "$loaded_modules_right"
 
