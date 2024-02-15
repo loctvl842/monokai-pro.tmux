@@ -145,7 +145,7 @@ main() {
   # ==================
   # windows
   # ==================
-  setw window-status-activity-style "fg=${accent3},bg=${accent1},none"
+  setw window-status-activity-style "fg=${accent3},bg=${dark1},none"
   setw window-status-separator ""
   setw window-status-style "fg=${dimmed1},bg=${dark2},none"
 
